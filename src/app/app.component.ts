@@ -8,14 +8,14 @@ import { NasaService } from './nasa.service';
 })
 export class AppComponent {
   title = 'NasaAngular12';
-  imageTitle:string;
+  image:string;
 
   constructor(private myService:NasaService){
-    this.imageTitle = "";
+    this.image = "";
 
     this.myService.getImageOfTheDay().subscribe(
-      (param_imageTitle:string) =>{
-        this.imageTitle = param_imageTitle;
+      (param_image:string) =>{
+        this.image = param_image;
       }
     )
   }

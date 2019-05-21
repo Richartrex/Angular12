@@ -16,7 +16,7 @@ export class NasaService {
     return this.myService.get("assets/nasa.json").pipe(
       map(
         (param_data: any) => {
-          let current = param_data.title;
+          let current = param_data.url;
           return current;
         }  
       )
