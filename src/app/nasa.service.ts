@@ -13,7 +13,7 @@ export class NasaService {
   }
 
   public getImageOfTheDay(): Observable<string> {
-    return this.myService.get("assets/nasa.json").pipe(
+    return this.myService.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY").pipe(
       map(
         (param_data: any) => {
           let current = param_data.url;
